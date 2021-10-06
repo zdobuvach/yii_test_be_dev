@@ -1,0 +1,34 @@
+version: '3.3'
+
+networks:
+  default:
+    driver: bridge
+
+services:
+  
+  mariadb:
+    image: mariadb:latest
+    restart: always
+    volumes:
+      - ./mariadb:/var/lib/mysql
+    environment:
+      MYSQL_ROOT_PASSWORD: qwerty
+      MYSQL_USER: uTestYii
+      MYSQL_PASSWORD: kj7hghkl98GF
+      MYSQL_DATABASE: testYii
+    ports:
+    - "8889:3306"
+      
+  web:
+    image: yiisoftware/yii2-php:8.0-apache
+    ports:
+      - 808:80
+    volumes:
+      - ./src:/app/web
+    links: 
+      - mariadb:db
+    depends_on:
+      - mariadb
+    build:
+      context: ./web
+      dockerfile: Dockerfile
