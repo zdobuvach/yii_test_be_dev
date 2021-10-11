@@ -1,23 +1,4 @@
 <?php
-
-$host = 'mariadb';
-
-// Database use name
-$user = 'uTestYii';
-
-//database user password
-$pass = 'kj7hghkl98GF';
-
-// check the MySQL connection status
-$conn = new mysqli($host, $user, $pass);
-if ($conn->connect_error) {
-    die("Connection failed: " . $conn->connect_error);
-} else {
-    echo "Connected to MySQL server successfully!";
-}
-
-die();
-
 // comment out the following two lines when deployed to production
 defined('YII_DEBUG') or define('YII_DEBUG', true);
 defined('YII_ENV') or define('YII_ENV', 'dev');

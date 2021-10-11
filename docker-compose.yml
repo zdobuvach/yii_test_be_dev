@@ -8,7 +8,7 @@ services:
   
   mariadb:
     image: mariadb:latest
-    restart: always
+    #restart: always
     volumes:
       - ./mariadb:/var/lib/mysql
     environment:
@@ -24,7 +24,8 @@ services:
     ports:
       - 808:80
     volumes:
-      - ./src:/app/web
+      - ./src/basic:/app
+      #- ./src/basic/web:/app/web
     links: 
       - mariadb:db
     depends_on:
