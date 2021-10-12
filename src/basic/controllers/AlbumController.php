@@ -11,6 +11,6 @@ use yii\rest\ActiveController;
 
 class AlbumController extends JsonResponse
 {
-    public $modelClass = 'app\models\Album';    
-    
+    public $modelClass = 'app\models\Album';
+        
 }

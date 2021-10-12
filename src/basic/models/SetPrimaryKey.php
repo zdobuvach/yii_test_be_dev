@@ -12,10 +12,21 @@ use yii\db\ActiveRecord;
 
 //use yii;
 
-class SetPrimaryKey extends ActiveRecord//Users
+class SetPrimaryKey extends ActiveRecord
 {  
+    public static $actionRole = 'index';
+
+    
     public static function primaryKey() {
         return ["id"];
+    }
+    
+    public static function setActiveRole($role){
+        self::$actionRole = $role;
+    }
+    
+    public static function getActionRole(){
+        return self::$actionRole;
     }
 
 }

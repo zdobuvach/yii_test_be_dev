@@ -13,12 +13,13 @@ use yii\db\ActiveRecord;
 //use yii;
 
 class Album extends SetPrimaryKey {
-
+    
     public function fields() {
+        
         $fields = parent::fields();
         //die(var_dump($fields));
 
-        switch (\Yii::$app->controller->action->id) {
+        switch (self::getActionRole()) {
             case 'index':
                 unset($fields['user_id'], $fields['photos']);
                 break;
@@ -43,6 +44,5 @@ class Album extends SetPrimaryKey {
 
     public function getUsers() {
         return $this->hasOne(Users::class, ['id' => 'user_id']);
-    }
-
+    }    
 }

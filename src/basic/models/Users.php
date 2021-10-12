@@ -17,7 +17,7 @@ class Users extends SetPrimaryKey {
     public function fields() {
         $fields = parent::fields();
 
-        switch (\Yii::$app->controller->action->id) {
+        switch (self::getActionRole()) {
             case 'index':
                 unset($fields['albums']);
                 break;
