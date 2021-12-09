@@ -72,9 +72,9 @@ docker-compose exec web sh
 -c - count users, albums, photos
 -m - message
 
-yii addinfo/users -m="Add users" -c=10
-yii addinfo/album -m="Add albums" -c=100
-yii addinfo/photo -m="Add photos" -c=1000
+yii addinfo/users -m="Add users" -c=10 <br>
+yii addinfo/album -m="Add albums" -c=100 <br>
+yii addinfo/photo -m="Add photos" -c=1000 <br>
 
 
 ### run tests
@@ -93,12 +93,12 @@ http://localhost:808/create/photos
 
 ### run api
 
-http://localhost:808/users
-http://localhost:808/users/1
-http://localhost:808/photos
-http://localhost:808/photos/1106
-http://localhost:808/albums
-http://localhost:808/albums/304
+http://localhost:808/users <br>
+http://localhost:808/users/1 <br>
+http://localhost:808/photos <br>
+http://localhost:808/photos/1106 <br>
+http://localhost:808/albums <br>
+http://localhost:808/albums/304 <br>
 
 ## done
 
@@ -118,25 +118,25 @@ src/basic/commands/AddinfoController.php
 
 #### controllers
 
-src/basic/controllers/AlbumController.php  
-src/basic/controllers/CreateController.php
-src/basic/controllers/JsonResponse.php
-src/basic/controllers/PhotoController.php
-src/basic/controllers/UsersController.php
+src/basic/controllers/AlbumController.php <br>  
+src/basic/controllers/CreateController.php <br>
+src/basic/controllers/JsonResponse.php <br>
+src/basic/controllers/PhotoController.php <br>
+src/basic/controllers/UsersController.php <br>
 
 
 #### models
 
-src/basic/models/Album.php
-src/basic/models/Album_change.php
-src/basic/models/Arsec.php
-src/basic/models/Photo.php
-src/basic/models/SetPrimaryKey.php
-src/basic/models/Users.php
-src/basic/models/Users_change.php
+src/basic/models/Album.php <br>
+src/basic/models/Album_change.php <br>
+src/basic/models/Arsec.php <br>
+src/basic/models/Photo.php <br>
+src/basic/models/SetPrimaryKey.php <br>
+src/basic/models/Users.php <br>
+src/basic/models/Users_change.php <br>
 
 
 #### tests
 
-src/basic/tests/api/ApiJsonCest.php
+src/basic/tests/api/ApiJsonCest.php <br>
 src/basic/tests/acceptance/AddUsersAndAlbumsCest.php
