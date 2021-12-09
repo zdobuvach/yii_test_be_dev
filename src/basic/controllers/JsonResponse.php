@@ -31,7 +31,7 @@ class JsonResponse extends ActiveController {
     }
 
     public function actionView($id) 
-    {
+    {        
         $this->modelClass::$actionRole = 'view';
         return $this->modelClass::findOne($id);
     }

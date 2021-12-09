@@ -1,3 +1,8 @@
 # git rm -r --cached nbproject/    - Удалите nbproject/ из локального отслеживания git, но сохраните ее на диске. 
 nbproject/
 .~*
+
+src/basic/config/users.php
+
+src/basic/tests/_output/*
+src/basic/tests/_support/_generated

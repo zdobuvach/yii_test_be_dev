@@ -3,6 +3,10 @@
 $params = require __DIR__ . '/params.php';
 $db = require __DIR__ . '/db.php';
 
+$users = require __DIR__ . '/users.php';
+
+$params['users'] = $users;
+
 $config = [
     'id' => 'basic',
     'basePath' => dirname(__DIR__),
@@ -13,7 +17,7 @@ $config = [
     ],
     'components' => [
         'response' => [
-            'format' => \yii\web\Response::FORMAT_JSON,
+            //'format' => \yii\web\Response::FORMAT_JSON,
             'charset' => 'UTF-8',
             // ...
         ],
@@ -58,11 +62,15 @@ $config = [
                             'rules' => [
                                 ['class' => 'yii\rest\UrlRule', 'controller' => 'users'],
                                 ['class' => 'yii\rest\UrlRule', 'controller' => 'album'],
+                                ['class' => 'yii\rest\UrlRule', 'controller' => 'photo'],
+                                ['class' => 'yii\web\UrlRule', 'pattern' => '/', 'route' => 'site/index'],
+                                ['class' => 'yii\web\UrlRule', 'pattern' => '/site/<action:>', 'route' => 'site/<action>'],
+                                ['class' => 'yii\web\UrlRule', 'pattern' => '/create/<action:>', 'route' => 'create/<action>'],
                             ],
                         ],
         
     ],
-    'params' => $params,
+    'params' => $params,    
 ];
 
 if (YII_ENV_DEV) {

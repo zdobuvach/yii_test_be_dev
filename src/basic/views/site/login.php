@@ -3,9 +3,9 @@
 /* @var $this yii\web\View */
 /* @var $form yii\bootstrap4\ActiveForm */
 /* @var $model app\models\LoginForm */
-
 use yii\bootstrap4\ActiveForm;
 use yii\bootstrap4\Html;
+
 
 $this->title = 'Login';
 $this->params['breadcrumbs'][] = $this->title;
@@ -41,7 +41,15 @@ $this->params['breadcrumbs'][] = $this->title;
     <?php ActiveForm::end(); ?>
 
     <div class="offset-lg-1" style="color:#999;">
-        You may login with <strong>admin/admin</strong> or <strong>demo/demo</strong>.<br>
-        To modify the username/password, please check out the code <code>app\models\User::$users</code>.
+        You may login with 
+        <?php
+        $or = '';
+         foreach ($this->context->module->params['users'] as $key => $value) {
+             echo "$or<strong>{$value["username"]}/{$value["username"]}</strong> ";
+             $or = ' or ';
+         }
+         echo '.<br>';
+        ?>        
+        To modify the username/password, please check out the code <code>app\config\users.php</code>.
     </div>
 </div>

@@ -1,0 +1,10 @@
+class_name: AcceptanceTester
+modules:
+    enabled:
+        - WebDriver:
+            url: http://web/            
+            browser: chrome
+        - Yii2:
+            part: [orm, fixtures]
+            entryScript: index-test.php
+            cleanup: false

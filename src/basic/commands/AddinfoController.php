@@ -40,7 +40,7 @@ class AddinfoController extends Controller {
             unset($users);
         }
 
-        echo $this->message . " " . $this->count;
+        echo $this->message . " " . $this->count  . " users add";
     }
 
     public function actionAlbum() {
@@ -48,7 +48,7 @@ class AddinfoController extends Controller {
             $model->user_id = $id;
             $model->title = 'Album title ' . $i;
         });
-        echo $this->message . " " . $this->count;
+        echo $this->message . " " . $this->count  . " albums add";
     }
 
     public function actionPhoto() {
@@ -56,7 +56,7 @@ class AddinfoController extends Controller {
             $model->album_id = $id;
             $model->title = 'phpoto title ' . $i;
         });
-        echo $this->message . " " . $this->count;
+        echo $this->message . " " . $this->count  . " photos add";
     }
 
     public function addFields($modelParent, $modelChild, $addFieldsFunc) {

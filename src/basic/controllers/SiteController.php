@@ -16,7 +16,7 @@ class SiteController extends Controller
     /**
      * {@inheritdoc}
      */
-    public function behaviors()
+     public function behaviors()
     {
         return [
             'access' => [
@@ -35,7 +35,7 @@ class SiteController extends Controller
                 'actions' => [
                     'logout' => ['post'],
                 ],
-            ],
+            ],            
         ];
     }
 
@@ -71,7 +71,8 @@ class SiteController extends Controller
      * @return Response|string
      */
     public function actionLogin()
-    {
+    {   
+        //var_dump(Yii::$app->user->identityClass::getUsers());
         if (!Yii::$app->user->isGuest) {
             return $this->goHome();
         }
