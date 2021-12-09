@@ -81,6 +81,8 @@ yii addinfo/photo -m="Add photos" -c=1000
 
  ./vendor/bin/codecept run
 
+### Before you begin, you need to rename src/basic/config/users_example.php to src/basic/config/users.php and add users with the passwords according to the template 
+
 ### run webpage
 
 http://localhost:808/
