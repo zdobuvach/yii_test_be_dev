@@ -34,10 +34,10 @@ API
 Create rest controller, which will provide API endpoint for such calls (expected json result)
 
 
-GET /users -  paginated list of users (id,first_name,last_name)
-GET /users/{id} - detail data of user (id,first_name,last_name,albums[])
-GET /albums - paginated list of albums (id, title)
-GET /albums/{id} - detail data of album (id,first_name,last_name,photos[])
+GET /users -  paginated list of users (id,first_name,last_name) <br>
+GET /users/{id} - detail data of user (id,first_name,last_name,albums[]) <br>
+GET /albums - paginated list of albums (id, title) <br>
+GET /albums/{id} - detail data of album (id,first_name,last_name,photos[]) <br>
 
 
 Seeders
