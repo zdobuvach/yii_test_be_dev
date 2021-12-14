@@ -100,6 +100,15 @@ http://localhost:808/photos/1106 <br>
 http://localhost:808/albums <br>
 http://localhost:808/albums/304 <br>
 
+Paginated output is available, for example like this:<br>
+
+http://localhost:808/users?page=2&per-page=5<br>
+
+where:<br>
+
+page=2 - page output 2<br>
+per-page=5 - output of five records per page<br>
+
 ## done
 
 ### db tables
